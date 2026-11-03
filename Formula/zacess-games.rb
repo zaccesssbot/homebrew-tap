@@ -10,22 +10,22 @@ class ZacessGames < Formula
   on_macos do
     on_arm do
       url "https://github.com/zacesshq/games/releases/download/v0.3.0/zacess-games-v0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "SHA256_MACOS_ARM"
+      sha256 "d3949872d921a75cfb2e19d385472c7f7e27cc225d5d1b0a6722303d9bf09e93"
     end
     on_intel do
       url "https://github.com/zacesshq/games/releases/download/v0.3.0/zacess-games-v0.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "SHA256_MACOS_INTEL"
+      sha256 "7c40b8531f01062276cf43c5b31d2fcf2a9d0c5beae0769439503779e04bbe5f"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/zacesshq/games/releases/download/v0.3.0/zacess-games-v0.3.0-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "SHA256_LINUX_ARM"
+      sha256 "85535b244cef1cb7eeadd72b9d327e557f13c2497100ecc10e6bce40c8ad2d41"
     end
     on_intel do
       url "https://github.com/zacesshq/games/releases/download/v0.3.0/zacess-games-v0.3.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "SHA256_LINUX_INTEL"
+      sha256 "a7229ddeebad2093e359377495ce1f40262e13a06390820781a6620118bcb3a8"
     end
   end
 
