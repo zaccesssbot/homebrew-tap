@@ -36,6 +36,7 @@ class ZacessGames < Formula
   test do
     assert_match "zacess-games", shell_output("#{bin}/zacess-games --version")
     ENV["ZACESS_GAMES_STATE"] = testpath/"state"
-    system bin/"zacess-games", "--headless", "trace", "--keys", "right,enter", "--size", "60x20", "--theme", "deep-dark"
+    system bin/"zacess-games", "--headless", "trace", "--keys", "right,enter",
+           "--size", "60x20", "--theme", "deep-dark"
   end
 end
