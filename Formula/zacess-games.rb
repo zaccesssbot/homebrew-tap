@@ -1,6 +1,7 @@
-# Homebrew formula template for Zacess Games. Replace 0.3.0 with the release version (without
-# the v) and each SHA256_ placeholder with the sum from the matching .sha256 file on the release,
-# then copy it to Formula/zacess-games.rb in the zacesshq/homebrew-tap repository.
+# Homebrew formula for Zacess Games 0.3.0, for Formula/zacess-games.rb in the zacesshq/homebrew-tap
+# repository. Each SHA256_ placeholder is the sum from the matching .sha256 file attached to the
+# v0.3.0 release; packaging/fill-checksums.sh fills them in. The next release changes the version
+# in the four URLs and the four sums.
 class ZacessGames < Formula
   desc "Fourteen original games for the terminal in the Zacess high contrast themes"
   homepage "https://zacess.com"
@@ -31,10 +32,11 @@ class ZacessGames < Formula
 
   def install
     bin.install "zacess-games"
+    doc.install "README.md", "CHANGELOG.md", "ACCESSIBILITY.md", "NOTICE.md"
   end
 
   test do
-    assert_match "zacess-games", shell_output("#{bin}/zacess-games --version")
+    assert_match "zacess-games #{version}", shell_output("#{bin}/zacess-games --version")
     ENV["ZACESS_GAMES_STATE"] = testpath/"state"
     system bin/"zacess-games", "--headless", "trace", "--keys", "right,enter",
            "--size", "60x20", "--theme", "deep-dark"
